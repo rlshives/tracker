@@ -1,0 +1,8 @@
+<div id="Q1" class="col-md-4">
+	<div class="list-group">
+		{{#each}}
+		{{#link-to "questions.question" this class="list-group-item"}}{{text}}{{/link-to}}
+		{{/each}}
+	</div>
+</div>
+{{outlet}}
