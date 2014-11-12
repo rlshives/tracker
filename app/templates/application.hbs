@@ -10,7 +10,7 @@
 	<div class="container-fluid">
 		<ul id="headNav" class="nav nav-pills pull-left">
 			<li>{{#link-to 'questions'}}Get Started{{/link-to}}</li>
-			<li><a href="#">Clear All Fields</a></li>
+			<li><a {{ action 'clearAll' this }}>Clear All Fields</a></li>
 			<li><a href="#">Test, Talk to me</a></li>
 		</ul>
 	</div>
