@@ -1,0 +1,6 @@
+		<!-- {{ #if 'question1' }} -->
+		<!-- {{ else }}
+    			{{#each choices}}
+    				<p class="list-group-item">{{input type="radio" checked=checked}}  {{text}}</p>
+    			{{/each}}
+    		{{ /if }} -->

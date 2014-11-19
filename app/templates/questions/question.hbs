@@ -1,15 +1,11 @@
 <div class="col-md-8">
 	<div class="list-group">
-		<h3>{{text}}</h3><br />
-		{{ #if question1 }}
+		<h3> {{question1}} {{text}}</h3><br />
+
 			{{#each choices}}
 				<p class="list-group-item">{{input type="checkbox" checked=checked}}  {{text}}</p>
 			{{/each}}
-		{{ else }}
-			{{#each choices}}
-				<p class="list-group-item">{{input type="radio" checked=checked}}  {{text}}</p>
-			{{/each}}
-		{{ /if }}
+
 	</div>
 	<div>
 		<nav class="navbar navbar-default" role="navigation">

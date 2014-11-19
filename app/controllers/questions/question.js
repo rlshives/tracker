@@ -3,13 +3,25 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-	question1: false,
-
-	actions: {
+	question1: function () {
+    if (parseInt(this.get('model.id')) === 1) {
+      console.log('question1: true');
+      return true;
+    }
+    else {
+      console.log('question1: false');
+      return false;
+    }
+  },
+  actions: {
 		next: function (question) {
-			var curId = this.get('model.id');
-			console.log('Next ID: ' + (parseInt(curId) + 1));
-			this.transitionToRoute('questions.question', (parseInt(curId) + 1));
+      var nextId = parseInt(this.get('model.id')) + 1;
+      if (nextId >= 52)
+      {
+        nextId = 1;
+      }
+			console.log('Next ID: ' + nextId);
+			this.transitionToRoute('questions.question', nextId);
 		}
 	}
 });
